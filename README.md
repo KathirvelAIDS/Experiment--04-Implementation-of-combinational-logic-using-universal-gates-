@@ -28,31 +28,30 @@ Program to design a Implementation of combinational logic using universal gates-
 Developed by: kathirveL.A
 RegisterNumber:  212221230047
 
--> F=((C'.B.A)'(D'.C.A)'(C.B'.A)')' USING NAND GATE
+-> F=((C'.B.A)'(D'.C.A)'(C.B'.A)')' USING NAND GATE                                                                                                                 
+                                                                                                                                                                   
+module ex04(A,B,C,D,F);                                                                                                                                             
+input A,B,C,D;                                                                                                                                                     
+output F;                                                                                                                                                           
+wire P,Q,R;                                                                                                                                                         
+assign P = C&(~B)&(~A);                                                                                                                                             
+assign Q = D&(~C)&(~A);                                                                                                                                             
+assign R = (~C)&B&(~A);                                                                                                                                             
+assign F = (~P&~Q&~R);                                                                                                                                             
+endmodule                                                                                                                                                           
+-> F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')' USING NOR GATE                                                                                                                                                                                                                                                                                   
 
-module ex04(A,B,C,D,F);
-input A,B,C,D;
-output F;
-wire P,Q,R;
-assign P = C&(~B)&(~A);
-assign Q = D&(~C)&(~A);
-assign R = (~C)&B&(~A);
-assign F = (~P&~Q&~R);
-endmodule
-
--> F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')' USING NOR GATE
-
-module ex41(A,B,C,D,F);
-input A,B,C,D;
-output F;
-wire P,Q,R,S;
-assign P = C&(~B)&A;
-assign Q = D&(~C)&A;
-assign R = C&(~B)&A;
-assign S = ~(P|Q|R);
-not(F,S);
-endmodule
-*/
+module ex41(A,B,C,D,F);                                                                                                                                             
+input A,B,C,D;                                                                                                                                                     
+output F;                                                                                                                                                           
+wire P,Q,R,S;                                                                                                                                                       
+assign P = C&(~B)&A;                                                                                                                                               
+assign Q = D&(~C)&A;                                                                                                                                               
+assign R = C&(~B)&A;                                                                                                                                               
+assign S = ~(P|Q|R);                                                                                                                                               
+not(F,S);                                                                                                                                                           
+endmodule                                                                                                                                                           
+*/                                                                                                                                                                 
 
 ## Output:
 
