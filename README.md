@@ -22,14 +22,8 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')' using NOR gate
 3.Run the respective programs for the given boolean equations.
 4.Run the module and get the respective RTL outputs.
 5.Create university program(VWF) for getting timing diagram.
-6.Give the respective inputs for timing diagram and obtain the results
-
-
-
-
-
+6.Give the respective inputs for timing diagram and obtain the result
 ## Program:
-/*
 Program to design a Implementation of combinational logic using universal gates-  and verify its truth table in quartus using Verilog programming.
 Developed by: kathirveL.A
 RegisterNumber:  212221230047
